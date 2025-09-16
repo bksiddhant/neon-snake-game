@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Modern Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-particles" id="backgroundParticles"></div>
+    
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-container">
+                <div><span class="score-label">SCORE:</span> <span id="score">0</span></div>
+                <div><span class="score-label">HIGH:</span> <span id="highScore">0</span></div>
+                <div><span class="score-label">LEVEL:</span> <span id="level">1</span></div>
+            </div>
+            <div class="controls">
+                <button id="startButton">Start Game</button>
+                <button id="pauseButton">Pause</button>
+                <button id="restartButton">Restart</button>
+                <button id="themeToggle">Theme</button>
+                <select id="difficultySelector">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="gameState" class="game-state"></div>
+        <div id="game-instructions" class="sr-only">
+            Snake game. Use arrow keys to move. Collect food to grow and earn points. 
+            Avoid hitting walls and yourself. Press spacebar to pause.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
