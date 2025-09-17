@@ -1012,12 +1012,12 @@ class ModernSnakeGame {
 
     drawStar(x, y, size, points = 5, innerRatio = 0.5) {
         const outerRadius = size;
-        const innerRadius = size * innerRatio;
+        theadInnerRadius = size * innerRatio;
         let angle = Math.PI / points;
 
         this.ctx.moveTo(x, y - outerRadius);
         for (let i = 0; i < 2 * points; i++) {
-            const radius = (i & 1) === 0 ? outerRadius : innerRadius;
+            const radius = (i & 1) === 0 ? outerRadius : theadInnerRadius;
             const pointX = x + radius * Math.sin(angle);
             const pointY = y - radius * Math.cos(angle);
             this.ctx.lineTo(pointX, pointY);

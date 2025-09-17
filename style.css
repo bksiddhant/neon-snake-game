@@ -122,6 +122,9 @@ select {
     display: block;
     box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
     transition: all 0.3s ease;
+    /* Make the canvas fill the container on all screens */
+    width: 100%;
+    height: auto;
 }
 
 #gameCanvas:focus {
